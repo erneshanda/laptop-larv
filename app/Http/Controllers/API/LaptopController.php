@@ -58,6 +58,8 @@ class LaptopController extends Controller
         try {
             $laptop->fill($request->all())->save();
             return response()->json(array('message'=>'Updated successfully', 'data'=>$laptop), 200);
+        } catch (\Exception $exception) {
+            throw new HttpException(400, "Failed update data - {$exception->getMessage()}");
         }
     } 
 
