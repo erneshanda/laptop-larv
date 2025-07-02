@@ -79,7 +79,7 @@ class LaptopController extends Controller
             $limit = @$data['filter']['_limit'] ? intval($data['filter']['_limit']) : 1000;
             $offset = ($page > 1) ? $page * $limit : 0;
 
-            $data['products'] = Book::whereRaw('1 = 1');
+            $data['products'] = Laptop::whereRaw('1 = 1');
 
             if ($request->get('_search')) {
                 $data['products'] = $data['products']->whereRaw(

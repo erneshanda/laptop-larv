@@ -20,6 +20,9 @@
         <link rel="stylesheet" type="text/css" href="{{asset('assets/css/plugins/magnific-popup.css')}}">
         <link rel="stylesheet" type="text/css" href="{{asset('assets/css/plugins/easyzoom.css')}}">
         <link rel="stylesheet" type="text/css" href="{{asset('assets/css/style.css')}}">
+        <!-- Animate.css (WOW.js depends on this) -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
         @yield('addition_css')
         <!-- END: CSS Assets -->
     </head>
@@ -46,7 +49,8 @@
         <script src="{{asset('assets/js/plugins/images-loaded.min.js')}}"></script>
         <script src="{{asset('assets/js/plugins/isotope.min.js')}}"></script>
         <script src="{{asset('assets/js/plugins/YTPlayer.js')}}"></script>
-
+        <!-- WOW.js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
         <!-- Instagramfeed JS -->
         <!-- <script src="{{asset('assets/js/plugins/jquery.instagramfeed.min.js')}}"></script> -->
         <script src="{{asset('assets/js/plugins/ajax.mail.js')}}"></script>
