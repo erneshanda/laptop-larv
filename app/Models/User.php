@@ -6,11 +6,27 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Laravel\Passport\HasApiTokens;
+use OpenApi\Annotations as OA;
+
+/**
+ * Class User.
+ *
+ * @author  Ernes Wihanda <ernes.422023031@civitas.ukrida.ac.id>
+ *
+ * @OA\Schema(
+ *     description="User model",
+ *     title="User model",
+ *     @OA\Xml(
+ *         name="User"
+ *     )
+ * )
+*/
 
 class User extends Authenticatable
 {
     /** @use HasFactory<\Database\Factories\UserFactory> */
-    use HasFactory, Notifiable;
+    use HasFactory, Notifiable, HasApiTokens;
 
     /**
      * The attributes that are mass assignable.

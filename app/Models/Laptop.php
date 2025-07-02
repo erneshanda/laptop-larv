@@ -3,7 +3,22 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use OpenApi\Annotations as OA;
 
+/**
+ * Class Laptop.
+ *
+ * @author  Ernes Wihanda <ernes.422023031@civitas.ukrida.ac.id>
+ *
+ * @OA\Schema(
+ *     description="Laptop model",
+ *     title="Laptop model",
+ *     required={"name", "price"},
+ *     @OA\Xml(
+ *         name="Laptop"
+ *     )
+ * )
+*/
 class Laptop extends Model
 {
     public function createdBy()
